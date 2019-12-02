@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" color="dark">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">
+      <b>Home</b>
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="secondary" (click)="logout()">
+        <ion-icon slot="icon-only" name="exit"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let cert of certificados">
+    <ion-item>
+      <ion-icon name="document" slot="start"></ion-icon>
+      <ion-label class="ion-text-center"><b>{{cert.name}}</b></ion-label>
+      <!--ion-button fill="outline" slot="end">
+        <ion-icon name="eye"></ion-icon>
+      </ion-button-->
+    </ion-item>
+    <ion-card-content class="ion-text-center">
+      Este certificado é referente ao curso de <b>{{cert.course.name}}</b>.
+    </ion-card-content>
+    <ion-item>
+      <ion-icon name="hourglass" slot="start"></ion-icon>
+      <b>STATUS:</b><ion-label class="ion-text-center" color="warning"><ion-icon name="clock" class="ionicon"></ion-icon></ion-label>
+      <b>HORAS: </b><ion-label class="" color="tertiary">00hs</ion-label>
+    </ion-item>
+  </ion-card>
+
+  <ion-card *ngFor="let cert of certificados">
+    <ion-item>
+      <ion-icon name="document" slot="start"></ion-icon>
+      <ion-label class="ion-text-center"><b>{{cert.name}}</b></ion-label>
+      <!--ion-button fill="outline" slot="end">
+        <ion-icon name="eye"></ion-icon>
+      </ion-button-->
+    </ion-item>
+    <ion-card-content class="ion-text-center">
+      Este certificado é referente ao curso de <b>{{cert.course.name}}</b>.
+    </ion-card-content>
+    <ion-item>
+      <ion-icon name="hourglass" slot="start"></ion-icon>
+      <b>STATUS:</b><ion-label class="ion-text-center" color="danger"><ion-icon name="close" class="ionicon"></ion-icon></ion-label>
+      <b>HORAS: </b><ion-label class="" color="tertiary">00hs</ion-label>
+    </ion-item>
+  </ion-card>
+
+  <ion-card *ngFor="let cert of certificados">
+    <ion-item>
+      <ion-icon name="document" slot="start"></ion-icon>
+      <ion-label class="ion-text-center"><b>{{cert.name}}</b></ion-label>
+      <!--ion-button fill="outline" slot="end">
+        <ion-icon name="eye"></ion-icon>
+      </ion-button-->
+    </ion-item>
+    <ion-card-content class="ion-text-center">
+      Este certificado é referente ao curso de <b>{{cert.course.name}}</b>.
+    </ion-card-content>
+    <ion-item>
+      <ion-icon name="hourglass" slot="start"></ion-icon>
+      <b>STATUS:</b><ion-label class="ion-text-center" color="success"><ion-icon name="checkmark" class="ionicon"></ion-icon></ion-label>
+      <b>HORAS: </b><ion-label class="" color="tertiary">17hs</ion-label>
+    </ion-item>
+  </ion-card>
+
+  <!-- fab placed to the bottom end -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="novoCertificado()">
+      <ion-icon name="add"></ion-icon>
+
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

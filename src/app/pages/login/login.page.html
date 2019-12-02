@@ -1,0 +1,55 @@
+<ion-content class="ion-padding" class="background-color">
+  <div class="container top">
+      <img class="logo" src="/assets/img/logo.png">
+   </div>
+
+   <ion-slides>
+      <ion-slide>
+        <div class="slide-inner ion-padding">
+  
+          <ion-item class="ion-margin-top" lines="none">
+            <ion-input type="email" placeholder="E-mail" required  [(ngModel)]="data.email"></ion-input>
+          </ion-item>
+  
+          <ion-item class="ion-margin-top" lines="none">
+              <ion-input type="password" placeholder="Senha" required  [(ngModel)]="data.password"></ion-input>
+          </ion-item>
+  
+          <ion-button class="ion-margin-top" (click)="logar()" color="light" expand="block">
+            Entrar
+          </ion-button>
+          <br>
+          <br>
+          <span class="text-color">Ainda não é cadastrado ? Arraste pro lado <ion-icon name="arrow-forward"></ion-icon></span>
+        </div>
+      </ion-slide>
+  
+      <ion-slide>
+          <div class="slide-inner ion-padding">
+    
+            <ion-item class="ion-margin-top" lines="none">
+              <ion-input type="email" placeholder="Nome" required [(ngModel)]="data2.name"></ion-input>
+            </ion-item>
+
+            <ion-item class="ion-margin-top" lines="none">
+              <ion-input type="email" placeholder="Email" required [(ngModel)]="data2.email"></ion-input>
+            </ion-item>
+            
+            <ion-item class="ion-margin-top" lines="none">
+                <ion-input type="password" placeholder="Senha" required [(ngModel)]="data2.password"></ion-input>
+            </ion-item>
+  
+            <ion-item class="ion-margin-top" lines="none">
+                <ion-input type="password" placeholder="Confirme a senha" required [(ngModel)]="data2.passwordConfirm"></ion-input>
+            </ion-item>
+    
+            <ion-button class="ion-margin-top" (click)="cadastrar()" color="light" expand="block">
+              Cadastrar
+            </ion-button>
+            <br>
+          <br>
+          <span class="text-color">Já é cadastrado ? <br>Arraste pro lado <ion-icon name="arrow-back"></ion-icon></span>
+          </div>
+        </ion-slide>
+    </ion-slides>
+</ion-content>

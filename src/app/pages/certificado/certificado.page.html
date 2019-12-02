@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">
+      <b>Perfil</b>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="background-color">
+    <div class="slide-inner ion-padding">
+        <h2 text-center class="ion-margin-top">Novo Certificado</h2>
+        <br>
+        <ion-item class="ion-margin-top" lines="none">
+            <ion-input type="text" placeholder="Título do certificado" required [(ngModel)]="dataCert.name"></ion-input>
+        </ion-item>
+        <br>
+        <ion-item>
+          <input type="file" ng2FileSelect (change)="upload($event)" />
+        </ion-item>
+        <br>
+        <br>
+        <ion-button class="ion-margin-top-btn" color="light" expand="block">
+          Adicionar
+        </ion-button>
+        <br>
+      </div>
+</ion-content>

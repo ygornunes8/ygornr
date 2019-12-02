@@ -1,0 +1,68 @@
+.background-color{
+    --ion-background-color:#212121;
+}
+
+.logo{
+    position:absolute;
+    left: 0;
+    right: 0;
+    margin:0 auto;
+    top:25%;
+    transform:translateY(-50%);
+}
+
+.container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 75%;
+    margin: 0 auto;
+    z-index: 2;
+
+    &.top {
+        top: 20%;
+    }
+
+    &.bottom {
+        bottom: 30%;
+
+        span {
+            color: #ffffff;
+        }
+    }
+}
+
+ion-slides {
+    height: 100%;
+
+    .slide-inner {
+        width: 75%;
+        color: #ffffff;
+        background-color: #212121;
+        border-radius:  10px;
+
+        ion-item {
+            --background: transparent;
+            --border-radius: 10px;
+
+            ion-input {
+                --color: #ffffff;
+            }
+        }
+    }
+}
+
+ion-input{ 
+    box-shadow: 0 0 10px #ff6263; 
+    margin: 1px;
+    width: 100px;
+    
+}
+
+.ion-margin-top{
+    -webkit-text-fill-color: white;
+}
+
+.text-color{
+    -webkit-text-fill-color: white;
+}
